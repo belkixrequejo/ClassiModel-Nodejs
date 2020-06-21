@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vistas</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%- include('../home/vistas.ejs') %>
+
+    <div class="row">
+      <div class="col-md-6 mt-4 text-center">
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>Fecha de la Orden</th>
+            <th>Nombre del Cliente</th>
+            <th>Nombre del producto</th>
+            <th>Venta Total</th>
+            <th>Clientes</th>
+          </tr>
+          <% for (var i = 0; i < view1.length; i ++) { %>
+          <tr>
+            <td><%- view1[i].orderDate %></td>
+            <td><%- view1[i].customerName %></td>
+            <td><%- view1[i].productName %></td>
+            <td><%- view1[i].VentaTotal %></td>
+            <td><%- view1[i].Clientes %></td>
+          </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
