@@ -3,15 +3,6 @@ const dbConnection = require("../../config/dbConnection");
 
 module.exports = app => {
 
-    const connection = dbConnection();
-    app.get('/listarorden', (req, res) => {
-        connection.query('SELECT * FROM orders', (err, result) => {
-            res.render('views/formulario', {
-                class3: result
-            });
-        });
-    });
-
     app.post('/ordenar', (req, res) => {
         // Order
         var a1=req.body.new_orderNumber;

@@ -19,32 +19,6 @@
 <%- include('../home/vistas.ejs') %>
 
 <div class="row">
-
-    <div class="col-md-6 mt-4 text-center">
-        <table class="table table-striped table-bordered">
-            <tr>
-                <th>N# orden</th>
-                <th>Fecha Orden</th>
-                <th>Fecha requerida</th>
-                <th>Fecha de envio</th>
-                <th>Estado</th>
-                <th>Comentario</th>
-                <th>Numero de Cliente</th>
-            </tr>
-            <% for (var i = 0; i < class3.length; i ++) { %>
-                <tr>
-                    <td><%- class3[i].orderNumber %></td>
-                    <td><%- class3[i].orderDate %></td>
-                    <td><%- class3[i].requiredDate %></td>
-                    <td><%- class3[i].shippedDate %></td>
-                    <td><%- class3[i].status %></td>
-                    <td><%- class3[i].comments %></td>
-                    <td><%- class3[i].customerNumber %></td>
-                </tr>
-            <% } %>
-        </table>
-    </div>
-
     <style>
         label {
             background-color: rgba(255, 255, 255, 0.75);
