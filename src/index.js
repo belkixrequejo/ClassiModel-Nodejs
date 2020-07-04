@@ -5,7 +5,7 @@ require("./app/routes/view1")(app);
 require("./app/routes/home")(app);
 require("./app/routes/orden")(app);
 require("./app/routes/formulario")(app);
-
+require("./app/routes/ordenformulario")(app);
 
 // starting the server
 app.listen(app.get("port"), () => {
